@@ -52,6 +52,7 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
+```bash
 # ssh user@158.160.19.198 -i id_rsa
 $ sudo -i
 # apt update
@@ -59,12 +60,12 @@ $ sudo -i
 # mysqladmin password -u root -p
 # mysql_secure_installation
 # mysql -u root -p
-mysql> CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'password';
+mysql> CREATE USER 'sys_test'@'localhost' IDENTIFIED BY 'password';
 mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost';
-mysql> show grants for 'sys_temp'@'localhost';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'sys_test'@'localhost';
+mysql> show grants for 'sys_test'@'localhost';
 mysql> exit
-# mysql -u sys_temp -p
+# mysql -u sys_test -p
 mysql> SELECT user();
 mysql> exit
 # wget https://downloads.mysql.com/docs/sakila-db.zip
@@ -81,6 +82,7 @@ mysql> exit
 mysql> SHOW DATABASES;
 mysql> USE sakila;
 mysql> SHOW TABLES;
+```
 
 
 ### Задание 2
