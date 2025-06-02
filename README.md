@@ -91,3 +91,7 @@ mysql> SHOW TABLES;
 Название таблицы | Название первичного ключа
 customer         | customer_id
 ```
+
+![](image/задание2(2).png)
+
+![](image/Задание2-1.png)
